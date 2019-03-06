@@ -122,16 +122,8 @@
                                     </SharePoint:AjaxDelta>
                                 </div>
 						        
-						        <!-- ===== STARTER: Global navigation ================================================================================= -->
-						        <div class="ms-dialogHidden">
-							        <SharePoint:AjaxDelta ID="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" runat="server">
-								        <SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
-									        <Template_Controls><asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" id="topSiteMap" runat="server" StartingNodeUrl="sid:1002"/></Template_Controls>
-								        </SharePoint:DelegateControl>
-							        
-								        <SharePoint:AspMenu ID="TopNavigationMenu" Runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="<%$Resources:wss,navigation_accesskey%>" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="2" SkipLinkText="" />
-							        </SharePoint:AjaxDelta>
-						        </div>
+						        
+						        
                             
                                 <!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
                                 
@@ -182,36 +174,19 @@
 				                                </SharePoint:PopoutMenu>
 			                                </SharePoint:AjaxDelta>
 		                                </div>
-		                                <SharePoint:AjaxDelta id="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation" role="navigation" runat="server">
-			                                <SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="DelegateControl1">
-				                                <Template_Controls>
-					                                <asp:SiteMapDataSource
-					                                ShowStartingNode="False"
-					                                SiteMapProvider="SPNavigationProvider"
-					                                id="SiteMapDataSource1"
-					                                runat="server"
-					                                StartingNodeUrl="sid:1002"/>
-				                                </Template_Controls>
-			                                </SharePoint:DelegateControl>
-			                                <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
-				                                <SharePoint:AspMenu
-				                                ID="AspMenu1"
-				                                Runat="server"
-				                                EnableViewState="false"
-				                                DataSourceID="topSiteMap"
-				                                AccessKey="<%$Resources:wss,navigation_accesskey%>"
-				                                UseSimpleRendering="true"
-				                                UseSeparateCss="false"
-				                                Orientation="Horizontal"
-				                                StaticDisplayLevels="2"
-				                                AdjustForShowStartingNode="true"
-				                                MaximumDynamicDisplayLevels="2"
-				                                SkipLinkText="" />
-			                                </asp:ContentPlaceHolder>
-		                                </SharePoint:AjaxDelta>
+                                        <!-- ===== STARTER: Global navigation ================================================================================= -->
+                                        <div class="ms-dialogHidden">
+                                            <SharePoint:AjaxDelta ID="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" runat="server">
+                                                <SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
+                                                    <Template_Controls><asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" id="topSiteMap" runat="server" StartingNodeUrl="sid:1002"/></Template_Controls>
+                                                </SharePoint:DelegateControl>
+							        
+                                                <SharePoint:AspMenu ID="TopNavigationMenu" Runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="<%$Resources:wss,navigation_accesskey%>" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="2" SkipLinkText="" />
+                                            </SharePoint:AjaxDelta>
+                                        </div>
 	                                </div>
                                     
-                                    <!-- ===== STARTER: Page Title ==================================================================================== -->
+                                     <!-- ===== STARTER: Page Title ==================================================================================== -->
 
 	                                <h1 id="pageTitle" class="ms-core-pageTitle">
 		                                <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
@@ -243,6 +218,8 @@
 			                                </SharePoint:ScriptBlock>
 		                                </SharePoint:AjaxDelta>
 	                                </h1>
+                                </div>
+                                   
                                 
 						        
 						        <!-- ===== STARTER: Search Control ==================================================================================== -->
@@ -258,7 +235,7 @@
 					            </div>
 					        </div>
                         </div>
-                    </div>
+                    
                 
 				<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
                 <div id="contentRow">
@@ -385,11 +362,11 @@
                     <asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" />
                     <asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" />
                     <asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
-
+                </div>
                 </div>
 				<!-- ===== STARTER: Main Content ========================================================================================== -->
-			    </div>
-            </div>
+		</div>
+        
 			<!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
 				
 		</SharePoint:SharePointForm>
